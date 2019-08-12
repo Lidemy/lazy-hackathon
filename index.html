@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MTR 新拖延運動黑客松 | 2019</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Noto+Sans+TC&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./js/slick/slick.css">
+  <link rel="stylesheet" href="./js/slick/slick-theme.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/3.1.0/material-components-web.js"></script>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.3.0/glide.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+  <script src="./js/index.js"></script>
+  
+</head>
+<body>
+  <!-- wrapper -->
+  <!--
+
+# 新拖延運動黑客松
+
+## 介紹
+
+網站連結：[GitHub Page](https://lidemy.github.io/lazy-hackathon/)
+
+![visual](https://i.imgur.com/sb1m6XB.png)
+
+此網站是 [程式導師實驗計畫第三期](https://github.com/Lidemy/mentor-program-3rd) 第二十週的作業，如果你覺得網站很卡很肥大，沒錯你是對的，因為我們故意把這個網站做得這麼卡。
+
+現在呢，你要來負責優化這個網站，在「不動內容」的情形下來調整（意思就是說網頁看起來要長得一模一樣，把圖片變黑白、刪減文字或是更動排版都是不允許的，但刪減多餘的 HTML、CSS 和 JS 是 ok 的，只要保證網頁看起來一樣就行了），目標是使網站的載入速度變快。
+
+這只是一個靜態網站而已，你可以 fork 到自己的 GitHub 去然後用 GitHub Page 來部署，並且使用 [WebPageTest](https://www.webpagetest.org/) 這個網站來測試你的網站速度為何。（測試地點請統一選擇 Singapore - EC2），Browser 為 Chrome。
+
+完成以後可以在這個 repo 開一個 Issue 來記錄自己的優化結果（範例待補）。
+
+若是你沒有任何靈感，可參考 [web.dev](https://web.dev/) 或是 [Website Performance Optimization](https://www.udacity.com/course/website-performance-optimization--ud884)
+
+## 關於
+
+此專案由 [@yakim-shu](https://github.com/yakim-shu) 負責製作。
+
+
+  -->
+  <div class="wrapper">
+    
+    <!-- nav -->
+    <nav class="nav sticky-top">
+      <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand nav__logo" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item data-scroll nav-link" href="#description">比賽簡介</a>
+            <a class="nav-item data-scroll nav-link" href="#team">參賽隊伍</a>
+            <a class="nav-item data-scroll nav-link" href="#schedule">活動時程</a>
+            <a class="nav-item data-scroll nav-link" href="#history">歷屆成績</a>
+            <a class="nav-item data-scroll nav-link" href="#judge">評審介紹</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- header -->
+    <header class="header">
+      <div class="bg"></div>
+    </header>
+   
+    <main class="main">
+
+      <!-- 比賽簡介 -->
+      <section class="section description">
+        <h3 class="section__title"><span>比賽簡介</span></h3>
+        <div class="description__bg">
+          <div class="description__inner">
+            <div class="typed description__title">
+                <h4 id="typed"></h4>
+            </div>
+            <p class="description__summary">
+              有拖延症的人很奇怪，不是所有的事都拖，只有<span>重要的事才拖</span>。並不是動作慢，反而大部分時間手腳還挺快的。偏偏就是那些最需要慢條斯理、按部就班的大計畫，才會拖泥帶水。這是為什麼？
+              <br><br>
+              我們都<span>不需要戰勝拖延症，而是與之好好相處</span>，就如同我們的恐懼與黑暗面也是。只要理解背後對你的意義，與其「空性」，所有一切本身都是無害的。
+              而且有時候（是有時候喔……）適時的小拖延，也不外乎是激發創造力與醞釀靈感的方法。願各位與拖延症有更好的相處。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- 參賽隊伍 -->
+      <section class="section team">
+        <h3 class="section__title"><span>參賽隊伍</span></h3>
+        <ul class="team-list">
+          <!-- item -->
+          <li class="team__item team__block__item body__section__team__item__section">
+            <p class="team__title team__block__title body__section__team__item__title">
+              <span class="team__name team__block__name body__section__team__item__name">逃得越遠越好</span>
+              交給同組的各位囉！
+            </p>
+            <div class="team__pic">
+              <img src="./image/team_a.jpg" alt="">
+            </div>
+            <a class="team__btn" href="">隊伍介紹</a>
+          </li>
+          <!-- item -->
+          <li class="team__item team__block__item body__section__team__item__section">
+            <p class="team__title team__block__title body__section__team__item__title">
+              <span class="team__name team__block__name body__section__team__item__name">不要吵我好嗎？</span>
+              躺著真的很快樂</p>
+            <div class="team__pic">
+              <img src="./image/team_b.jpg" alt="">
+            </div>
+            <a class="team__btn" href="">隊伍介紹</a>
+          </li>
+          <!-- item -->
+          <li class="team__item team__block__item body__section__team__item__section">
+            <p class="team__title team__block__title body__section__team__item__title">
+              <span class="team__name team__block__name body__section__team__item__name">我還是個孩紙</span>
+              來人啊！快救我
+            </p>
+            <div class="team__pic">
+              <img src="./image/team_c.jpg" alt="">
+            </div>
+            <a class="team__btn" href="">隊伍介紹</a>
+          </li>
+          <!-- item -->
+          <li class="team__item team__block__item body__section__team__item__section">
+            <p class="team__title team__block__title body__section__team__item__title">
+              <span class="team__name team__block__name body__section__team__item__name">我是誰？我在哪？</span>
+              可以回家了嗎？
+            </p>
+            <div class="team__pic">
+              <img src="./image/team_d.jpg" alt="">
+            </div>
+            <a class="team__btn" href="">隊伍介紹</a>
+          </li>
+          <!-- item -->
+          <li class="team__item team__block__item body__section__team__item__section">
+            <p class="team__title team__block__title body__section__team__item__title">
+              <span class="team__name team__block__name body__section__team__item__name">我想打電動</span>
+              我媽逼我來的
+            </p>
+            <div class="team__pic">
+              <img src="./image/team_e.jpg" alt="">
+            </div>
+            <a class="team__btn" href="">隊伍介紹</a>
+          </li>
+          <!-- item -->
+          <li class="team__item team__block__item body__section__team__item__section">
+            <p class="team__title team__block__title body__section__team__item__title">
+              <span class="team__name team__block__name body__section__team__item__name">mama coco</span>
+              呵呵呵
+            </p>
+            <div class="team__pic">
+              <img src="./image/team_f.jpg" alt="">
+            </div>
+            <a class="team__btn" href="">隊伍介紹</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 活動時程 -->
+      <section class="section schedule">
+        <h3 class="section__title"><span>活動時程</span></h3>
+        <table class="table table-hover table-bordered table-striped text-center">
+          <thead>
+            <tr>
+              <th>時間</th>
+              <th>Day 1 (12/01)</th>
+              <th>Day 2 (12/02)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08:00</td>
+              <td>早餐</td>
+              <td>早餐</td>
+            </tr>
+            <tr>
+              <td>10:00</td>
+              <td>開幕活動</td>
+              <td>聊天時間</td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td>中餐</td>
+              <td>中餐</td>
+            </tr>
+            <tr>
+              <td>14:00</td>
+              <td>睡午覺</td>
+              <td>睡午覺</td>
+            </tr>
+            <tr>
+              <td>16:00</td>
+              <td>整理桌面資料夾</td>
+              <td>翻小時候照片</td>
+            </tr>
+            <tr>
+              <td>18:00</td>
+              <td>晚餐</td>
+              <td>晚餐</td>
+            </tr>
+            <tr>
+              <td>20:00</td>
+              <td>一同追劇</td>
+              <td>玩個桌遊吧</td>
+            </tr>
+            <tr>
+              <td>21:00</td>
+              <td>宵夜</td>
+              <td>正式開發！</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 歷屆成績 -->
+      <section class="section history">
+        <h3 class="section__title dark-mode"><span>歷屆成績</span></h3>
+        <ul class="history__list">
+          <li class="history__item body_section--history-item__li">
+            <p>10</p>
+            <span>組隊伍</span>
+          </li>
+          <li class="history__item body_section--history-item__li">
+            <p>5</p>
+            <span>組請假回家</span>
+          </li>
+          <li class="history__item body_section--history-item__li">
+            <p>3</p>
+            <span>組負責打掃</span>
+          </li>
+          <li class="history__item body_section--history-item__li">
+            <p>2</p>
+            <span>組人間蒸發</span>
+          </li>
+        </ul>
+
+        <!-- 使用者見證 -->
+        <ul class="comments">
+          <li class="comments__item">
+            <p><span class="comments__icon icon-strength"></span>自從服用「新拖延維他命 」，從此就用了五年以上了! 很好的產品，吃完腸道清空、腦袋清空</p>
+          </li>
+          <li class="comments__item">
+            <p><span class="comments__icon icon-buddha"></span>自從參加「新拖延運動黑客松 」之後，我決定不再問塵世，一心向佛，現在已是少林寺第二掌門人了呢！</p>
+          </li>
+          <li class="comments__item">
+            <p><span class="comments__icon icon-sleep"></span>每天最期待的就是回家躺在「保證不拖延床套組」裡面，暖暖的很舒服，工作本來三小時可以完成，現在都變三天了呢，真的好神奇。</p>
+          </li>
+          <li class="comments__item">
+            <p><span  class="comments__icon icon-bao"></span>
+              因為你是我的好朋友才跟你分享「 懶惰豆沙包 」。你知道我本來是很鐵齒的人嗎？也不相信這些東西，當我開始接觸之後豁然開朗，那叫相見恨晚...。
+            </p>
+          </li>
+        </ul>
+
+      </section>
+
+<!--
+臣亮言：先帝創業未半，而中道崩殂，今天下三分，益州疲弊，此誠危急存亡之秋也。然侍衞之臣，不懈於內，忠志之士，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣，不宜妄自菲薄，引喻失義，以塞忠諫之路也。
+
+　　宮中府中，俱爲一體，陟罰臧否，不宜異同。若有作奸犯科及爲忠善者，宜付有司，論其刑賞，以昭陛下平明之理，不宜偏私，使內外異法也。
+
+　　侍中、侍郎郭攸之、費禕、董允等，此皆良實，志慮忠純，是以先帝簡拔以遺陛下。愚以爲宮中之事，事無大小，悉以咨之，然後施行，必能裨補闕漏，有所廣益。
+
+　　將軍向寵，性行淑均，曉暢軍事，試用於昔日，先帝稱之曰「能」，是以衆議舉寵爲督。愚以爲營中之事，事無大小，悉以咨之，必能使行陣和睦，優劣得所也。
+
+　　親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，此後漢所以傾頹也。先帝在時，每與臣論此事，未嘗不歎息痛恨於桓、靈也。侍中、尚書、長史、參軍，此悉貞亮死節之臣也，願陛下親之信之，則漢室之隆，可計日而待也。
+
+　　臣本布衣，躬耕於南陽，苟全性命於亂世，不求聞達於諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣於草廬之中，諮臣以當世之事，由是感激，遂許先帝以驅馳。後值傾覆，受任於敗軍之際，奉命於危難之間，爾來二十有一年矣。
+
+　　先帝知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂歎，恐託付不效，以傷先帝之明，故五月渡瀘，深入不毛。今南方已定，兵甲已足，當獎率三軍，北定中原，庶竭駑鈍，攘除姦凶，興復漢室，還於舊都。此臣所以報先帝，而忠陛下之職分也。至於斟酌損益，進盡忠言，則攸之、禕、允之任也。
+
+　　願陛下託臣以討賊興復之效；不效，則治臣之罪，以告先帝之靈。若無興德之言，則責攸之、禕、允等之慢，以彰其咎。陛下亦宜自謀，以諮諏善道，察納雅言。深追先帝遺詔，臣不勝受恩感激。
+
+　　今當遠離，臨表涕泣，不知所云。
+
+-->
+
+      <!-- 評審介紹 -->
+      <section class="section judge">
+        <h3 class="section__title dark-mode"><span>評審介紹</span></h3>
+        
+        <!-- 縮圖 nav -->
+        <ul class="judge__nav">
+          <li class="judge__item judge__item--test judge__item--show">
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_a.jpg" alt="">
+            </div>
+          </li>
+          <li class="judge__item judge__item--test judge__item--show">
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_b.jpg" alt="">
+            </div>
+          </li>
+          <li class="judge__item judge__item--test judge__item--show">
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_c.jpg" alt="">
+            </div>
+          </li>
+          <li class="judge__item judge__item--test judge__item--show">
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_d.jpg" alt="">
+            </div>
+          </li>
+          <li class="judge__item judge__item--test judge__item--show">
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_e.jpg" alt="">
+            </div>
+          </li>
+          <li class="judge__item judge__item--test judge__item--show">
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_f.jpg" alt="">
+            </div>
+          </li>
+          <li class="judge__item judge__item--test judge__item--show">
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_g.jpg" alt="">
+            </div>
+          </li>
+          <li class="judge__item judge__item--test judge__item--show">
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_h.jpg" alt="">
+            </div>
+          </li>
+        </ul>
+
+        <!-- 大圖 gallery -->
+        <ul class="judge__gallery">
+          <li>
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_a_l.jpg" alt="">
+            </div>
+            <div class="judge__card">
+              <h4 class="judge__card-title">我是不明生物</h4>
+              <p class="judge__card-summary">
+                - 木柵扛壩子 4 ni <br>
+                - 打哈欠
+              </p>
+              <a href="" class="btn">了解更多</a>
+            </div>
+          </li>
+          <!-- item -->
+          <li>
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_b_l.jpg" alt="">
+            </div>
+            <div class="judge__card">
+              <h4 class="judge__card-title">巴哥巴哥 pug pug</h4>
+              <p class="judge__card-summary">
+                - 木柵扛壩子 4 ni <br>
+                - 打哈欠
+              </p>
+              <a href="" class="btn">了解更多</a>
+            </div>
+          </li>
+          <!-- item -->
+          <li>
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_c_l.jpg" alt="">
+            </div>
+            <div class="judge__card">
+              <h4 class="judge__card-title">本人小萌貓啦</h4>
+              <p class="judge__card-summary">
+                - 木柵扛壩子 4 ni <br>
+                - 打哈欠
+              </p>
+              <a href="" class="btn">了解更多</a>
+            </div>
+          </li>
+          <!-- item -->
+          <li>
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_d_l.jpg" alt="">
+            </div>
+            <div class="judge__card">
+              <h4 class="judge__card-title">無尾熊走路超慢你知道嗎</h4>
+              <p class="judge__card-summary">
+                - 木柵扛壩子 4 ni <br>
+                - 打哈欠
+              </p>
+              <a href="" class="btn">了解更多</a>
+            </div>
+          </li>
+          <!-- item -->
+          <li>
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_e_l.jpg" alt="">
+            </div>
+            <div class="judge__card">
+              <h4 class="judge__card-title">木柵耍萌扛壩子</h4>
+              <p class="judge__card-summary">
+                - 木柵扛壩子 4 ni <br>
+                - 打哈欠
+              </p>
+              <a href="" class="btn">了解更多</a>
+            </div>
+          </li>
+          <!-- item -->
+          <li>
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_f_l.jpg" alt="">
+            </div>
+            <div class="judge__card">
+              <h4 class="judge__card-title">馬馬很危險喔</h4>
+              <p class="judge__card-summary">
+                - 木柵扛壩子 4 ni <br>
+                - 打哈欠
+              </p>
+              <a href="" class="btn">了解更多</a>
+            </div>
+          </li>
+          <!-- item -->
+          <li>
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_g_l.jpg" alt="">
+            </div>
+            <div class="judge__card">
+              <h4 class="judge__card-title">熊熊沒事做</h4>
+              <p class="judge__card-summary">
+                - 木柵扛壩子 4 ni <br>
+                - 打哈欠
+              </p>
+              <a href="" class="btn">了解更多</a>
+            </div>
+          </li>
+          <!-- item -->
+          <li>
+            <div class="pic this_is_an_image image123321 image456789">
+              <img src="./image/judge_h_l.jpg" alt="">
+            </div>
+            <div class="judge__card">
+              <h4 class="judge__card-title">你～說～什～毛～</h4>
+              <p class="judge__card-summary">
+                - 木柵扛壩子 4 ni <br>
+                - 打哈欠
+              </p>
+              <a href="" class="btn">了解更多</a>
+            </div>
+          </li>
+          <!-- item -->
+        </ul>
+      </section>
+      
+    </main>
+
+    <!-- footer -->
+    <footer class="section footer">
+      
+      <!-- 報名資訊 -->
+      <section class="subscribe">
+        <div class="subscribe__inner">
+          <h3 class="section__title"><span>報名資訊</span></h3>
+          <p class="subscribe__summary">
+            還沒試過拖延救世界的快感嗎？<br>
+            快來一起參與吧，點以下連結拯救人生
+          </p>
+          <div class="subscribe__input">
+            <input type="email" placeholder="輸入 email 獲得最新消息">
+            <button class="btn" type="submit">立即訂閱</button>
+          </div>
+        </div>
+    
+    
+      </section>
+
+      <!-- copyright & 社群 -->
+      <section class="footer__info">
+        <p class="copyright">&copy; Copyright 2019, Yakim.</p>
+        <div class="footer__social-media">
+          <a href="" class="footer__social-icon icon-fb"></a>
+          <a href="" class="footer__social-icon icon-twitter"></a>
+          <a href="" class="footer__social-icon icon-ig"></a>
+          <a href="" class="footer__social-icon icon-g-plus"></a>
+        </div>
+      </section>
+    </footer>
+
+  </div>
+</body>
+</html>
+
+<!--
+漢皇重色思傾國，御宇多年求不得。
+楊家有女初長成，養在深閨人未識。
+天生麗質難自棄，一朝選在君王側。
+回眸一笑百媚生，六宮粉黛無顏色。
+春寒賜浴華清池，溫泉水滑洗凝脂。
+侍兒扶起嬌無力，始是新承恩澤時。
+雲鬢花顏金步搖，芙蓉帳暖度春宵。
+春宵苦短日高起，從此君王不早朝。
+承歡侍宴無閒暇，春從春遊夜專夜。
+後宮佳麗三千人，三千寵愛在一身。
+金屋妝成嬌侍夜，玉樓宴罷醉和春。
+姊妹弟兄皆列土，可憐光彩生門戶。
+遂令天下父母心，不重生男重生女。
+驪宮高處入青雲，仙樂風飄處處聞。
+緩歌慢舞凝絲竹，盡日君王看不足。
+漁陽鼙鼓動地來，驚破霓裳羽衣曲。
+九重城闕煙塵生，千乘萬騎西南行。
+翠華搖搖行復止，西出都門百餘里。
+六軍不發無奈何，宛轉蛾眉馬前死。
+花鈿委地無人收，翠翹金雀玉搔頭。
+君王掩面救不得，回看血淚相和流。
+黃埃散漫風蕭索，雲棧縈紆登劍閣。
+峨嵋山下少人行，旌旗無光日色薄。
+蜀江水碧蜀山青，聖主朝朝暮暮情。
+行宮見月傷心色，夜雨聞鈴腸斷聲。
+天旋日轉迴龍馭，到此躊躇不能去。
+馬嵬坡下泥土中，不見玉顏空死處。
+君臣相顧盡沾衣，東望都門信馬歸。
+歸來池苑皆依舊，太液芙蓉未央柳。
+芙蓉如面柳如眉，對此如何不淚垂。
+春風桃李花開日，秋雨梧桐葉落時。
+西宮南內多秋草，落葉滿階紅不掃。
+梨園子弟白髮新，椒房阿監青娥老。
+夕殿螢飛思悄然，孤燈挑盡未成眠。
+遲遲鐘鼓初長夜，耿耿星河欲曙天。
+鴛鴦瓦冷霜華重，翡翠衾寒誰與共。
+悠悠生死別經年，魂魄不曾來入夢。
+臨邛道士鴻都客，能以精誠致魂魄。
+為感君王輾轉思，遂教方士殷勤覓。
+排空馭氣奔如電，升天入地求之遍。
+上窮碧落下黃泉，兩處茫茫皆不見。
+忽聞海上有仙山，山在虛無縹緲間。
+樓閣玲瓏五雲起，其中綽約多仙子。
+中有一人字太真，雪膚花貌參差是。
+金闕西廂叩玉扃，轉教小玉報雙成。
+聞道漢家天子使，九華帳裏夢魂驚。
+攬衣推枕起徘徊，珠箔銀屏迤邐開。
+雲髻半偏新睡覺，花冠不整下堂來。
+風吹仙袂飄颻舉，猶似霓裳羽衣舞。
+玉容寂寞淚闌干，梨花一枝春帶雨。
+含情凝睇謝君王，一別音容兩渺茫。
+昭陽殿裏恩愛絕，蓬萊宮中日月長。
+回頭下望人寰處，不見長安見塵霧。
+唯將舊物表深情，鈿合金釵寄將去。
+釵留一股合一扇，釵擘黃金合分鈿。
+但教心似金鈿堅，天上人間會相見。
+臨別殷勤重寄詞，詞中有誓兩心知。
+七月七日長生殿，夜半無人私語時。
+在天願作比翼鳥，在地願為連理枝。
+天長地久有時盡，此恨綿綿無絕期。
+
+-->
