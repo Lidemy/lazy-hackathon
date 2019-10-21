@@ -14,7 +14,7 @@
 
 部署上去之後可以使用 [WebPageTest](https://www.webpagetest.org/) 這個網站來測試你的網站速度為何。（測試地點請統一選擇 Singapore - EC2），Browser 為 Chrome。
 
-完成以後可以在這個 repo 開一個 [Issue](https://github.com/Lidemy/lazy-hackathon/issues/new/choose) 來記錄自己的優化結果（[範例](https://github.com/Lidemy/lazy-hackathon/issues/1)）。
+完成以後可以在這個 repo 開一個 [Issue](https://github.com/Lidemy/lazy-hackathon/issues/new/choose) 來記錄自己的優化結果（[範例](https://github.com/Lidemy/lazy-hackathon/issues/1)）。也可以在 Issues 裡面看到其他人的優化報告，看看別人怎麼優化，順便偷學個幾招。
 
 若是你沒有任何靈感，可參考 [web.dev](https://web.dev/) 或是 [Website Performance Optimization](https://www.udacity.com/course/website-performance-optimization--ud884)
 
