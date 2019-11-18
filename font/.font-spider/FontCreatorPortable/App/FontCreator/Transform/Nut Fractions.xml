@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DATA>
+  <TransformScript>
+    <OtherComments>
+      <Content>Nut Fractions
+Inserts nut fractions (stacking fractions) in the Private Use Area. Adjust the width and weight to suit your font. Some glyphs will need editing to fix intersecting contours.</Content>
+    </OtherComments>
+    <GlyphInsertCharacters>
+      <Characters>58188-58190, 60531-60542</Characters>
+      <OverrideRange>TRUE</OverrideRange>
+    </GlyphInsertCharacters>
+    <GlyphCompleteComposites>
+    </GlyphCompleteComposites>
+    <GlyphDecompose>
+    </GlyphDecompose>
+    <EffectsBold>
+      <Horizontal>15</Horizontal>
+      <Vertical>10</Vertical>
+      <PreserveBearings>FALSE</PreserveBearings>
+    </EffectsBold>
+    <OutlineMove>
+      <Horizontal>0</Horizontal>
+      <Vertical>10</Vertical>
+    </OutlineMove>
+    <MetricsWidth>
+      <WidthType>0</WidthType>
+      <Width>781</Width>
+      <Adjust>0</Adjust>
+    </MetricsWidth>
+    <MetricsCenterGlyph>
+    </MetricsCenterGlyph>
+    <MetricsLeftSideBearing>
+    </MetricsLeftSideBearing>
+  </TransformScript>
+</DATA>

@@ -1,0 +1,37 @@
+{
+  "name": "lazy-hackathon",
+  "version": "1.0.0",
+  "description": "## 介紹",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lagom0327/lazy-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lagom0327/lazy-hackathon/issues"
+  },
+  "homepage": "https://github.com/lagom0327/lazy-hackathon#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-font-spider": "^0.3.6",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-terser": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-html": "^1.0.2"
+  }
+}

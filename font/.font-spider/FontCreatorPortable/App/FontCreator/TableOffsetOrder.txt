@@ -1,0 +1,25 @@
+; These tags are case sensitive and should be four characters long
+; Fonts are more efficient in the Windows operating system
+; when the tables are ordered as follows (from first to last):
+; head, hhea, maxp, OS/2, hmtx, LTSH, VDMX, hdmx, cmap, fpgm,
+; prep, cvt, loca, glyf, kern, name, post, gasp, PCLT, DSIG
+head
+hhea
+maxp
+OS/2
+hmtx
+LTSH
+VDMX
+hdmx
+cmap
+fpgm
+prep
+cvt 
+loca
+glyf
+kern
+name
+post
+gasp
+PCLT
+DSIG

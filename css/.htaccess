@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+ErrorDocument 404 "<H1>I am 404!</H1>
+</IfModule>
+<FilesMatch ".(eot|ttf|otf|woff|woff2)">
+  Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+# -----------------------------------------------------------------------
+# 定義MIME類型以確保Web服務器真正了解它們。
+# Defining MIME types to ensure the web server actually knows about them.
+# -----------------------------------------------------------------------
+
+
+
+
+
+<IfModule mod_mime.c>
+AddType application/javascript          js
+AddType application/vnd.ms-fontobject   eot
+AddType application/x-font-ttf          ttf ttc
+AddType font/opentype                   otf
+AddType application/font-woff         woff
+AddType application/font-woff2        woff2
+AddType image/svg+xml                   svg svgz
+AddEncoding gzip                        svgz
+</Ifmodule>
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>

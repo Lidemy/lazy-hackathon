@@ -1,5 +1,7 @@
 $(function(){
+  
 
+  
 // 部分程式碼來自：[lodash](https://github.com/lodash/lodash)
 
 const typed3 = new Typed('#typed', {
@@ -39,19 +41,7 @@ const typed3 = new Typed('#typed', {
         }
       }
     ]
-  });
-
-    window.addEventListener("hashchange", function (event) {
-      event.preventDefault();
-      const url = location.hash.substr(1);
-      const target = document.querySelector(`.${url}`).offsetTop - 60;
-      window.scrollTo({
-        top: target,
-        left: 0,
-        behavior: 'smooth' // => 滑動效果
-      });
-  });
-  
+  }); 
   
   /*
   nav 縮小
@@ -65,4 +55,48 @@ const typed3 = new Typed('#typed', {
     }
   }, {capture: false, passive: true })
 });
+const updatSrc = (picture) => {
+  const img = $(picture).find('img');
+  const webp = $(picture).find('source');
+  console.log($(webp).data('srcset'));
+  $(webp).attr('srcset', $(webp).data('srcset'));
+  $(webp).removeData('data-srcset');
+  $(img).attr('src', $(img).data('src'));// 把值塞回 src
+  $(img).removeData('data-src');
+}
+// 為了 chrome 無法顯示 slick list 裡的大圖 slick 縮圖進入畫面才顯示
+const updateSlick = () => {
+  const pictures = $('picture.lazyload.img_q');
+  $(pictures).each((i, picture) => {
+    updatSrc(picture);
+  });
+};
+
+
+const lazyload = () => {
+  const watcher = new IntersectionObserver(onEnterView)
+  const lazyImages = document.querySelectorAll('picture.lazyload:not(.img_q)')
+  for (let image of lazyImages) {
+      watcher.observe(image) // 開始監視
+  }
+
+  function onEnterView(entries, observer) {
+    for (let entry of entries) {
+        if (entry.isIntersecting) {
+          // 監視目標進入畫面
+          const picture = entry.target;
+          if ($(picture).is('#judge_first')) {
+            updateSlick();
+          }
+          updatSrc(picture);
+          observer.unobserve(picture); //取消監視
+        }
+    }
+  }
+} 
+
+$(document).ready(() => {
+  lazyload();
+})
+
 
