@@ -1,0 +1,23 @@
+{
+  "name": "lazy-hackathon",
+  "version": "1.0.0",
+  "description": "Web performance enhance",
+  "main": "./js/index.js",
+  "scripts": {
+    "build": "esbuild js/index.js --bundle --minify --sourcemap --outfile=public/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YouMinTW/lazy-hackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YouMinTW/lazy-hackathon/issues"
+  },
+  "homepage": "https://github.com/YouMinTW/lazy-hackathon#readme",
+  "dependencies": {
+    "esbuild": "^0.12.5"
+  }
+}
