@@ -19,5 +19,10 @@
   "homepage": "https://github.com/YouMinTW/lazy-hackathon#readme",
   "dependencies": {
     "esbuild": "^0.12.5"
+  },
+  "devDependencies": {
+    "chokidar": "^3.5.1",
+    "eslint": "^7.27.0",
+    "live-server": "^1.2.1"
   }
 }
