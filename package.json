@@ -4,6 +4,7 @@
   "description": "Web performance enhance",
   "main": "./js/index.js",
   "scripts": {
+    "start": "node serve.js",
     "build": "esbuild js/index.js --bundle --minify --sourcemap --outfile=public/bundle.js"
   },
   "repository": {
