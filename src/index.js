@@ -36,7 +36,7 @@ $(function () {
       },
     ],
   });
-
+  // command for testing github status
   window.addEventListener("hashchange", function (event) {
     event.preventDefault();
     const url = location.hash.substr(1);
