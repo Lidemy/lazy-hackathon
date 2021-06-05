@@ -38,6 +38,7 @@ $(function () {
   });
   // command for testing github status
   // command for testing github status2
+  // command for testing github status3
   window.addEventListener("hashchange", function (event) {
     event.preventDefault();
     const url = location.hash.substr(1);
